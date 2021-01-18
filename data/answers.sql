@@ -12,3 +12,28 @@ SELECT contact_name AS name, contact_title AS title FROM public.customers WHERE 
 DELETE FROM public.customers WHERE city = 'Lyon';
 UPDATE public.customers SET region = 'Unknown' WHERE region is NULL;
 
+CREATE TABLE public.article
+(
+    article_id bpchar NOT NULL PRIMARY KEY,
+    headline character varying (50) NOT NULL,
+    subhead character varying (50) NOT NULL,
+    category character varying (50) NOT NULL,
+    author character varying (50) NOT NULL,
+    cover character varying (50),
+    createdat timestamp with time zone NOT NULL,
+    updatedat timestamp with time zone NOT NULL,
+);
+
+CREATE TABLE public.author
+(
+    author_id bpchar NOT NULL PRIMARY KEY,
+    name character varying (50) NOT NULL,
+    img character varying (50),
+);
+
+CREATE TABLE public.review
+(
+    review_id bpchar NOT NULL PRIMARY KEY,
+    text character varying (50) NOT NULL,
+    "user" character varying (50) NOT NULL,
+);
