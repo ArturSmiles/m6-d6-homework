@@ -21,19 +21,19 @@ CREATE TABLE public.article
     author character varying (50) NOT NULL,
     cover character varying (50),
     createdat timestamp with time zone NOT NULL,
-    updatedat timestamp with time zone NOT NULL,
+    updatedat timestamp with time zone NOT NULL
 );
 
 CREATE TABLE public.author
 (
     author_id bpchar NOT NULL PRIMARY KEY,
     name character varying (50) NOT NULL,
-    img character varying (50),
+    img character varying (50)
 );
 
 CREATE TABLE public.review
 (
     review_id bpchar NOT NULL PRIMARY KEY,
     text character varying (50) NOT NULL,
-    "user" character varying (50) NOT NULL,
+    "user" character varying (50) NOT NULL
 );
