@@ -14,7 +14,7 @@ UPDATE public.customers SET region = 'Unknown' WHERE region is NULL;
 
 CREATE TABLE public.article
 (
-    article_id bpchar NOT NULL PRIMARY KEY,
+    article_id integer NOT NULL PRIMARY KEY,
     headline character varying (50) NOT NULL,
     subhead character varying (50) NOT NULL,
     category character varying (50) NOT NULL,
@@ -26,14 +26,14 @@ CREATE TABLE public.article
 
 CREATE TABLE public.author
 (
-    author_id bpchar NOT NULL PRIMARY KEY,
+    author_id integer NOT NULL PRIMARY KEY,
     name character varying (50) NOT NULL,
     img character varying (50)
 );
 
 CREATE TABLE public.review
 (
-    review_id bpchar NOT NULL PRIMARY KEY,
+    review_id integer NOT NULL PRIMARY KEY,
     text character varying (50) NOT NULL,
     "user" character varying (50) NOT NULL
 );
